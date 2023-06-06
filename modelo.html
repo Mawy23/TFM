@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal F.C</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-marging centrar-texto">Blog<span class="logo__bold">Arsenal F.C</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="modelo.html" class="navegacion__enlace">Modelo Predictivo</a>
+                    <a href="temporada.html" class="navegacion__enlace">Temporada Actual</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-marging">Blog sobre el Arsenal F.C</h2>
+            <p class="no-marging">Analisis de Juego y Modelo Predictivo</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+       <h3 class="centrar-texto">Modelo Predictivo</h3>
+
+       <div class="modelo">
+            
+            <div class="modelo__informacion">
+                <p class="modelo__descripcion">
+                    Un modelo predictivo es un conjunto de técnicas y algoritmos matemáticos que se utilizan para predecir resultados futuros en función de datos históricos 
+                    y variables relevantes. Estos modelos pueden ser utilizados en una amplia variedad de campos, desde finanzas y marketing hasta la medicina y la ingeniería.
+                </p>
+                <p> 
+                    Los modelos predictivos suelen basarse en técnicas de aprendizaje automático y estadística, que permiten analizar grandes cantidades de datos y encontrar 
+                    patrones que puedan utilizarse para predecir resultados futuros. Por ejemplo, un modelo predictivo podría utilizarse para predecir cuántas ventas se 
+                    realizarán en un mes determinado en función de datos históricos de ventas, el clima y otros factores relevantes.
+                </p>
+                <p>
+                    Para crear un modelo predictivo, se debe contar con una gran cantidad de datos históricos y una buena comprensión de las variables que influyen en el 
+                    resultado que se desea predecir. Luego, se deben seleccionar y ajustar los algoritmos y técnicas de aprendizaje automático adecuados para el problema 
+                    específico que se está tratando de resolver.
+                </p>
+                <p>
+                    Una vez que se ha entrenado el modelo con los datos históricos, se puede utilizar para predecir resultados futuros en función de nuevos datos que se 
+                    ingresen en el modelo. Es importante tener en cuenta que los modelos predictivos nunca son perfectos, y siempre hay un cierto grado de incertidumbre en 
+                    las predicciones. Sin embargo, cuanto más se ajuste y se entrene el modelo, más precisas serán las predicciones que se obtengan.
+                </p>
+                <p>
+                    En resumen, un modelo predictivo es una herramienta poderosa que permite a las empresas y organizaciones predecir resultados futuros en función de datos 
+                    históricos y variables relevantes. A través del uso de técnicas de aprendizaje automático y estadística, estos modelos pueden ayudar a las empresas a 
+                    tomar decisiones más informadas y mejorar la eficiencia en una amplia variedad de campos.
+                </p>
+
+                <p>
+                    Mi modelo predictivo tratará de predecir los resultados futuros del Arsenal FC, basandose en una serie de variables impuestas por el desarrollador. Este 
+                    modelo esta programado en el lenguaje Python y obteniendo los datos necesarios a través de FBRef. En este Blog detallaré todos los pasos que he seguido 
+                    así como complementandolo con imagenes del mismo.
+                </p>
+
+                <h4 class="centrar-texto">Paso a Paso</h4>
+
+                <div class="modelo__imagen">
+                    <img src="img/BeautifulSoup.png" alt="BeautifulSoup">
+                </div>
+
+                <p>
+                    Este fragmento de código utiliza la biblioteca BeautifulSoup para extraer datos de una página web.
+                </p>
+                <p>
+                    La primera línea crea un objeto BeautifulSoup llamado "soup" que contiene el contenido de una página web en forma de texto (data.text).
+                </p>
+                <p>
+                    La segunda línea busca en el objeto "soup" un elemento HTML con la etiqueta "table" y la clase "stats_table", y lo almacena en una variable llamada 
+                    "standings_table".
+                </p>
+                <p>
+                    La tercera línea busca todos los elementos "a" dentro de la tabla de posiciones (standings_table) y almacena sus URLs en una lista llamada "links".
+                </p>
+                <p>
+                    La cuarta línea filtra los elementos de la lista "links" para quedarse únicamente con aquellos que contienen la cadena de texto "/squads/" en su URL.
+                </p>
+                <p>
+                    En resumen, este fragmento de código busca y filtra URLs específicos en una página web utilizando la biblioteca BeautifulSoup, lo que podría ser útil 
+                    para extraer información específica de una página web y almacenarla en una estructura de datos para su posterior procesamiento o análisis.
+                </p>
+
+                <p><br/></p>
+
+                <div class="linea"></div>
+
+                <p><br/></p>
+
+                <p>
+                    Una vez tenemos ya los datos podemos proceder a mostrarlos en formato de tabla para que sea más sencillo de identificar todas las columnas que contiene.
+                </p>
+                
+                <div class="modelo__imagen">
+                    <img src="img/ModeloInicial.png" alt="Tabla Inicial">
+                </div>
+
+                <p><br/></p>
+
+                <div class="linea"></div>
+
+                <p><br/></p>
+
+                <div class="modelo__imagen">
+                    <img src="img/Time.png" alt="Time">
+                </div>
+
+                <p>
+                    Este fragmento de código es un script de Python que utiliza la biblioteca BeautifulSoup y la biblioteca pandas para extraer datos de la web y almacenarlos 
+                    en un dataframe.
+                </P>
+                <p>
+                    El código utiliza un bucle "for" para iterar a través de cada año en la lista "years". Dentro del bucle, el código envía una solicitud HTTP GET a una URL 
+                    de la página web (standings_url) utilizando la biblioteca requests.
+                </p>
+                <p>
+                    El código utiliza entonces la biblioteca BeautifulSoup para extraer el contenido HTML de la página web en formato de texto, y selecciona la tabla de 
+                    posiciones de la Premier League utilizando la clase "stats_table".
+                </p>
+                <p>
+                    A continuación, el código busca todos los enlaces de la tabla de posiciones que contienen la cadena "/squads/" en su URL y construye una lista de URLs 
+                    de equipos completa para la temporada actual.
+                </p>
+                <p>
+                    El código utiliza entonces otra solicitud HTTP GET para acceder a la página web de cada equipo, extrae las estadísticas de los partidos utilizando 
+                    la función "read_html" de la biblioteca pandas, y también extrae las estadísticas de tiro utilizando la biblioteca BeautifulSoup.
+                </p>
+                <p>
+                    El código combina las estadísticas de los partidos y las estadísticas de tiro utilizando la función "merge" de pandas y filtra los datos para incluir 
+                    sólo los partidos de la Premier League. Luego, agrega el año y el nombre del equipo a los datos y los almacena en un dataframe llamado "all_matches".
+                </p>
+                <p>
+                    Finalmente, el código pausa la ejecución durante un segundo utilizando la función "sleep" de la biblioteca time antes de continuar con el siguiente 
+                    equipo. Esto se hace para evitar sobrecargar el servidor web con demasiadas solicitudes en un corto período de tiempo.
+                </p>
+                <p>
+                    La tabla obtenida tras realizar este proceso es la siguiente.
+                </p>
+
+                <div class="modelo__imagen">
+                    <img src="img/Match.png" alt="Time">
+                </div>
+
+                <p><br/></p>
+
+                <div class="linea"></div>
+
+                <p><br/></p>
+
+                <p>
+                    Una vez filtramos por nuestro equipo y seleccionamos la cantidad de partidos que queremos para más adelante poder hacer nuestro modelo, la tabla quedaria
+                    de la siguiente manera.
+                </p>
+
+                <div class="modelo__imagen">
+                    <img src="img/TablaArsenal.png" alt="Time">
+                </div>
+
+                <p><br/></p>
+
+                <div class="linea"></div>
+
+                <p><br/></p>
+
+                <div class="modelo__imagen">
+                    <img src="img/Transformacion.png" alt="Time">
+                </div>
+
+                <p>
+                    Este código realiza la transformación de algunas variables en un dataframe llamado "matches", que probablemente contiene información de partidos de algún 
+                    deporte en el que un equipo juega contra otro.
+                </p>
+                <p>
+                    Las transformaciones son las siguientes:
+                </p>
+                <ul>
+                    <li>
+                        La columna "target" se crea a partir de la columna "result" y asigna un valor de 1 si el resultado fue una victoria ("W") y 0 en caso contrario.
+                    </li>
+                    <li>
+                        La columna "venue_code" se crea a partir de la columna "venue" y asigna un código numérico a cada valor único de esta columna, lo que permite codificar la información de la variable de texto en una variable numérica.
+                    </li>
+                    <li>
+                        La columna "opp_code" se crea a partir de la columna "opponent" y también asigna un código numérico a cada valor único de esta columna.
+                    </li>
+                    <li>
+                        La columna "hour" se crea a partir de la columna "time" y extrae el valor numérico de la hora, eliminando los minutos y los segundos.
+                    </li>
+                    <li>
+                        La columna "day_code" se crea a partir de la columna "date" y asigna un código numérico al día de la semana correspondiente a cada fecha.
+                    </li>
+                </ul>
+                <p>
+                    En resumen, estas transformaciones son útiles para convertir datos de texto en datos numéricos y para extraer información útil de las fechas y horas de los partidos, lo que puede facilitar su análisis posterior.
+                </p>
+                
+                <div class="modelo__imagen">
+                    <img src="img/TablaT.png" alt="Time">
+                </div>
+
+                <p><br/></p>
+
+                <div class="linea"></div>
+
+                <p><br/></p>
+
+                <div class="modelo__imagen">
+                    <img src="img/RForest.png" alt="Time">
+                </div>
+
+                <p>
+                    Este código utiliza la biblioteca scikit-learn (sklearn) para entrenar y evaluar un modelo de clasificación Random Forest en un dataframe llamado 
+                    "matches".
+                </p>
+                <p>
+                    La primera línea importa la clase RandomForestClassifier de la biblioteca sklearn. Esta clase representa el modelo Random Forest, que es un conjunto 
+                    de árboles de decisión que se entrenan en diferentes subconjuntos aleatorios de las variables de entrada y producen una predicción combinada.
+                </p>
+                <p>
+                    La segunda línea crea una instancia de la clase RandomForestClassifier con algunos hiperparámetros específicos. En este caso, se establecen 50 
+                    árboles, un tamaño mínimo de muestra de 10 para dividir un nodo interno y una semilla aleatoria de 1 para reproducibilidad.
+                </p>
+                <p>
+                    Las siguientes dos líneas crean dos subconjuntos de datos para entrenamiento y prueba, utilizando la columna "date" como criterio de división. 
+                    En este caso, el conjunto de entrenamiento contiene todos los partidos que tuvieron lugar antes del 1 de enero de 2023, mientras que el conjunto 
+                    de prueba contiene todos los partidos que tuvieron lugar después de esa fecha.
+                </p>
+                <p>
+                    La variable "predictors" contiene los nombres de las columnas que se utilizarán como variables de entrada para entrenar el modelo, que son "venue_code", 
+                    "opp_code", "hour" y "day_code". Estas columnas fueron creadas previamente en el dataframe "matches" a través de la transformación de datos.
+                </p>
+                <p>
+                    La quinta línea ajusta el modelo RandomForestClassifier a los datos de entrenamiento, utilizando los predictores y la columna "target" 
+                    (que fue creada previamente en el dataframe) como variables de entrada y salida, respectivamente.
+                </p>
+                <p>
+                    La sexta línea utiliza el modelo entrenado para hacer predicciones sobre el conjunto de prueba y asigna los resultados a la variable "preds".
+                </p>
+                <p>
+                    La séptima línea importa la función accuracy_score de sklearn.metrics, que se utiliza para calcular la precisión del modelo en el conjunto de 
+                    prueba. La precisión es la proporción de predicciones correctas en el conjunto de prueba.
+                </p>
+                <p>
+                    La última línea calcula la precisión del modelo y la asigna a la variable "error". La precisión se calcula comparando las predicciones del modelo con 
+                    los valores reales de la columna "target" en el conjunto de prueba.
+                </p>
+
+                <p><br/></p>
+
+                <div class="linea"></div>
+
+                <p><br/></p>
+
+                <div class="modelo__imagen">
+                    <img src="img/rolling.png" alt="Time">
+                </div>
+
+                <p>
+                    Este código define una función llamada "rolling_averages" que calcula las medias móviles de un conjunto de variables para un grupo de datos y devuelve 
+                    un nuevo dataframe que incluye las medias móviles.
+                </p>
+                <p>
+                    La función toma tres argumentos:
+                </p>
+                <ul>
+                    <li>
+                        "group": un dataframe que contiene los datos de un grupo específico que se desea procesar.
+                    </li>
+                    <li>
+                        "cols": una lista de nombres de columnas que se utilizarán para calcular las medias móviles.
+                    </li>
+                    <li>
+                        "new_cols": una lista de nuevos nombres de columnas que se asignarán a las columnas calculadas.
+                    </li>
+                </ul>
+                <p>
+                    La primera línea del cuerpo de la función ordena el dataframe "group" por fecha en orden ascendente.
+                </p>
+                <p>
+                    La segunda línea calcula las medias móviles de las columnas especificadas en "cols" utilizando el método de rolling mean de pandas. En este caso, 
+                    se calculan las medias móviles utilizando una ventana de tres observaciones y se especifica el argumento "closed='left'" para incluir la observación 
+                    en el extremo izquierdo de la ventana.
+                </p>
+                <p>
+                    La tercera línea asigna las medias móviles calculadas a nuevas columnas del dataframe "group" utilizando los nombres especificados en "new_cols".
+                </p>
+                <p>
+                    La cuarta línea elimina cualquier fila del dataframe que contenga valores faltantes en las nuevas columnas calculadas.
+                </p>
+                <p>
+                    La quinta línea devuelve el dataframe "group" modificado y con las medias móviles calculadas.
+                </p>
+                <p>
+                    La última línea del código no es ejecutable por sí misma y se asume que se aplicará la función a un grupo específico de datos en un contexto más 
+                    amplio. En este caso, la función se llamaría pasando un grupo de datos (llamado "group") junto con las listas de columnas "cols" y "new_cols".
+                </p>
+
+                <div class="modelo__imagen">
+                    <img src="img/rollingT.png" alt="Time">
+                </div>
+
+                <p><br/></p>
+
+                <div class="linea"></div>
+
+                <p><br/></p>
+
+                <div class="modelo__imagen">
+                    <img src="img/predictions.png" alt="Time">
+                </div>
+
+                <p>
+                    La función "make_predictions" toma dos argumentos de entrada: el conjunto de datos y las variables predictoras.
+                </p>
+                <p>
+                    A continuación, se dividen los datos en dos conjuntos: "train" y "test", donde "train" contiene todos los datos 
+                    hasta el 31 de diciembre de 2022, y "test" contiene los datos desde el 1 de enero de 2023 en adelante.
+                </p>
+                <p>
+                    En la siguiente línea del código, se ajusta un modelo de Random Forest en los datos de entrenamiento "train", 
+                    utilizando las variables predictoras especificadas en el argumento "predictors" y la variable objetivo "target" del conjunto de datos.
+                </p>
+                <p>
+                    Esto implica que se está utilizando un modelo de Random Forest llamado "rf", previamente definido, para ajustar los datos de entrenamiento. 
+                    Los datos de entrenamiento se especifican utilizando la variable "train", y se seleccionan las columnas correspondientes a las variables predictoras 
+                    mediante el uso del argumento "predictors". La variable objetivo del modelo se especifica utilizando el argumento "target", que se extrae de los datos 
+                    de entrenamiento.<br>
+
+                    Una vez que se ajusta el modelo a los datos de entrenamiento, el modelo está listo para hacer predicciones en nuevos datos.
+                </p>
+                <p>
+                    Se realiza la predicción del modelo en los datos de prueba "test", utilizando las mismas variables predictoras que se usaron para ajustar el modelo.
+                </p>
+                <p>
+                    Se crea un DataFrame de Pandas llamado "combined" que contiene la variable objetivo real ("actual") y la variable objetivo predicha ("predicted"), 
+                    indexadas por las fechas de los datos de prueba.
+                </p>
+                <p>
+                    Finalmente, se calcula la precisión del modelo utilizando la métrica de precisión (precision_score) en los datos de prueba. La función devuelve los 
+                    resultados en un DataFrame llamado "combined" y el valor de precisión en la variable "error".
+                </p>
+
+                <div class="modelo__imagen">
+                    <img src="img/predictionsT.png" alt="Time">
+                </div>
+            
+                <p><br/></p>
+
+                <div class="linea"></div>
+
+                <p><br/></p>
+
+                <div class="modelo__imagen">
+                    <img src="img/rename.png" alt="Time">
+                </div>
+
+                <p>
+                    Se define una nueva clase llamada "MissingDict" que hereda de la clase "dict". Esta clase tiene una sola función llamada "missing" que se ejecuta 
+                    cuando se busca una clave que no existe en el diccionario. En este caso, simplemente devuelve la clave que se buscó.
+                </p>
+                <p>
+                    Se define un diccionario llamado "map_values" que contiene los nombres de los equipos que deben ser reemplazados por sus nombres abreviados. Luego 
+                    se crea una instancia de la clase "MissingDict" llamada "mapping" utilizando los valores del diccionario como argumentos de palabra clave. Esto permitirá 
+                    que se utilice el diccionario de una manera un poco diferente a lo normal, permitiendo que cualquier valor no encontrado en el diccionario simplemente se 
+                    devuelva tal como es.
+                </p>
+                <p>
+                    Se crea una nueva columna en el DataFrame "combined" llamada "new_team", que contiene los nombres de los equipos modificados utilizando el diccionario 
+                    de mapeo definido anteriormente. La columna "team" contiene los nombres de los equipos originales.
+                </p>
+                <p>
+                    Se combina el DataFrame "combined" consigo mismo utilizando la fecha y el nombre del equipo modificado (almacenado en la columna "new_team") como claves 
+                    de unión en la parte izquierda, y utilizando la fecha y el nombre del oponente (almacenado en la columna "opponent") como claves de unión en la parte derecha. 
+                    Esto permite unir filas de "combined" que corresponden a partidos entre dos equipos. El resultado se guarda en un nuevo DataFrame llamado "merged".
+                </p>
+
+                <div class="modelo__imagen">
+                    <img src="img/renameT.png" alt="Time">
+                </div>
+
+            </div> <!--.nodelo__info-->
+
+        </div> <!--.Modelo-->
+
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-marging centrar-texto">Blog<span class="logo__bold">Arsenal F.C</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="modelo.html" class="navegacion__enlace">Modelo Predictivo</a>
+                    <a href="temporada.html" class="navegacion__enlace">Temporada Actual</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
